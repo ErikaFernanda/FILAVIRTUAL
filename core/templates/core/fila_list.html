@@ -1,0 +1,10 @@
+{% extends "core/base.html" %}
+{% block title %} Minhas filas {% endblock %}
+
+{% block content %}
+    {% for fila in fila_list %}
+        <article>
+            <h3>{{fila.descricao}}</h3>
+        </article>
+    {% endfor %}
+{% endblock %}

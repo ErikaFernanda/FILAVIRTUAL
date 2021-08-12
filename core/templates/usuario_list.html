@@ -1,0 +1,10 @@
+{% extends "core/base.html" %}
+{% block title %} Meus usuarios {% endblock %}
+
+{% block content %}
+    {% for user in user_list %}
+        <article>
+            <h3>{{user.email}}</h3>
+        </article>
+    {% endfor %}
+{% endblock %}
