@@ -1,0 +1,10 @@
+{% extends "core/base.html" %}
+{% block title %} Minhas empresas {% endblock %}
+
+{% block content %}
+    {% for empresa in empresa_list %}
+        <article>
+            <h3>{{empresa.nome}}</h3>
+        </article>
+    {% endfor %}
+{% endblock %}

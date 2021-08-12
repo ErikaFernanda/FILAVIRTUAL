@@ -22,7 +22,7 @@ class Fila(models.Model):
 
 class FilaPosicao(models.Model):
     fila = models.ForeignKey(Fila, on_delete=models.CASCADE)
-    usuario = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     posicao = models.IntegerField()
     def __self__(self):
         return self.usuario.nome+"  "+self.posicao
