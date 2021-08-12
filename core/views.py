@@ -1,4 +1,5 @@
 from django.views.generic import DetailView, ListView
+from .forms import EmpresaForm
 
 from .models import Empresa, Fila
 
@@ -18,4 +19,8 @@ class EmpresaListView(ListView):
     model = Empresa
 class EmpresaDetailView(DetailView):
     model = Empresa
+
+def empresaForm(request):
+    form = EmpresaForm()
+    return render(request,'empresa_form.html',{'form':form})
 
